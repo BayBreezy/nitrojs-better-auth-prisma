@@ -1,0 +1,61 @@
+{
+  "name": "nitro-better-auth-prisma-example",
+  "private": false,
+  "description": "An example of using Better Auth with NitroJS and Prisma",
+  "keywords": [
+    "nitro",
+    "nitrojs",
+    "better-auth",
+    "prisma",
+    "example"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Behon Baker",
+    "email": "behon.baker@yahoo.com",
+    "url": "https://behonbaker.com"
+  },
+  "scripts": {
+    "afterClone": "npm i && npm run prisma:push && npm run prisma:seed && npm run better:generate",
+    "better:generate": "npx @better-auth/cli generate --config ./server/utils/auth.ts",
+    "build": "nitro build",
+    "dev": "nitro dev",
+    "format": "prettier --write .",
+    "prepare": "husky",
+    "preview": "npx --yes dotenv-cli -- node .output/server/index.mjs",
+    "prisma:generate": "npx prisma generate",
+    "prisma:push": "npx prisma db push",
+    "prisma:seed": "npx prisma db seed",
+    "prisma:studio": "npx prisma studio"
+  },
+  "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.2",
+    "@prisma/client": "^5.22.0",
+    "better-auth": "^1.0.7",
+    "chalk": "^5.3.0",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.13",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.16",
+    "prisma-extension-pagination": "^0.7.4",
+    "rotating-file-stream": "^3.2.5",
+    "serve-static": "^2.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^19.6.0",
+    "@faker-js/faker": "^9.2.0",
+    "@types/cors": "^2.8.17",
+    "@types/morgan": "^1.9.9",
+    "@types/nodemailer": "^6.4.17",
+    "@types/serve-static": "^1.15.7",
+    "commitlint": "^19.6.0",
+    "husky": "^9.1.7",
+    "nitropack": "latest",
+    "prettier": "^3.4.1",
+    "prisma": "^5.22.0"
+  },
+  "prisma": {
+    "seed": "npx --yes tsx prisma/seed.ts"
+  }
+}
