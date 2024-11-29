@@ -1,0 +1,70 @@
+---
+title: Here is your One-Time Password (OTP) that you can use to access your account.
+preheader: Here is your One-Time Password (OTP) that you can use to access your account.
+---
+
+<x-main>
+  <div class="font-inter bg-white">
+    <table align="center" class="m-0 mx-auto">
+      <tr>
+        <td class="w-[550px] max-w-full sm:px-3 px-0">
+          <table class="w-full">
+            <tr>
+              <td>
+                <x-spacer height="40px" />
+
+                <table class="w-full">
+                  <tr>
+                    <x-body-container>
+                      <table class="w-full">
+                        <!-- Header with company name -->
+                        <x-company-header />
+                        <tr>
+                          <td>
+                            <x-body-text>Hello @{{ username }},</x-body-text>
+                            <x-body-text>
+                              Did you request a One-Time Password (OTP) to access your account?
+                            </x-body-text>
+                            <x-body-text>
+                              If you did not request an OTP, please ignore this email. Otherwise,
+                              you can use the following OTP to access your account.
+                            </x-body-text>
+                            <p class="font-extrabold select-all text-2xl">@{{ otp }}</p>
+                            <x-body-text
+                              >This code will be good for the next 5 minutes, so make sure to use it
+                              before it expires.</x-body-text
+                            >
+                            <x-body-text>
+                              If you're having trouble accessing your account with the OTP above,
+                              please try sending another request or contact our support team.
+                            </x-body-text>
+                            <x-body-text>
+                              Thanks,
+                              <br />
+                              <span>The <strong>{{ company.shortName }}</strong> team.</span>
+                            </x-body-text>
+                            <x-divider />
+                            <x-body-text>
+                              If you have any questions, please don't hesitate to contact us at
+                              <x-company-email-link />
+                            </x-body-text>
+                            <x-spacer height="16px" />
+                            <x-divider />
+                            <x-spacer height="16px" />
+                            <!-- Footer with company information -->
+                            <x-company-footer />
+                          </td>
+                        </tr>
+                      </table>
+                    </x-body-container>
+                  </tr>
+                </table>
+                <x-spacer height="40px" />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</x-main>

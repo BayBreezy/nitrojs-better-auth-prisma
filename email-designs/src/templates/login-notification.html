@@ -1,0 +1,72 @@
+---
+title: An attempt was made to log into your account. Here's what you need to know.
+preheader: An attempt was made to log into your account. Here's what you need to know.
+---
+
+<x-main>
+  <div class="font-inter">
+    <table align="center" class="m-0 mx-auto">
+      <tr>
+        <td class="w-[550px] max-w-full sm:px-3 px-0">
+          <table class="w-full">
+            <tr>
+              <td>
+                <x-spacer height="40px" />
+
+                <table class="w-full">
+                  <tr>
+                    <x-body-container>
+                      <table class="w-full">
+                        <!-- Header with company name -->
+                        <x-company-header />
+                        <tr>
+                          <td>
+                            <x-body-text>Hello @{{ username }},</x-body-text>
+                            <x-body-text>
+                              We wanted to let you know that an attempt was made to log into your
+                              account.
+                            </x-body-text>
+                            <x-body-text>
+                              If you did not make this attempt, please contact us immediately at
+                              <x-company-email-link />
+                            </x-body-text>
+
+                            <x-body-text>
+                              <span><strong>Device:</strong> @{{ device }}</span> <br />
+                              <span><strong>Location:</strong> @{{ location }}</span> <br />
+                              <span><strong>Date:</strong> @{{ datetime }}</span>
+                            </x-body-text>
+
+                            <x-body-text>
+                              If logged into your account recently, you can ignore this email.
+                            </x-body-text>
+                            <x-body-text>
+                              Thanks,
+                              <br />
+                              <span>The <strong>{{ company.shortName }}</strong> team.</span>
+                            </x-body-text>
+                            <x-divider />
+                            <x-body-text>
+                              If you have any questions, please don't hesitate to contact us at
+                              <x-company-email-link />
+                            </x-body-text>
+                            <x-spacer height="16px" />
+                            <x-divider />
+                            <x-spacer height="16px" />
+                            <!-- Footer with company information -->
+                            <x-company-footer />
+                          </td>
+                        </tr>
+                      </table>
+                    </x-body-container>
+                  </tr>
+                </table>
+                <x-spacer height="40px" />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</x-main>

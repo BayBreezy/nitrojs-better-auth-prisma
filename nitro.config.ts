@@ -4,6 +4,8 @@ export default defineNitroConfig({
   timing: true,
   storage: {
     uploads: { driver: "fs", base: "./uploads" },
+    // So you can access the email templates easily that are built by maizzle
+    emails: { driver: "fs", base: "./emails" },
   },
   runtimeConfig: {
     SMTP_HOST: "",

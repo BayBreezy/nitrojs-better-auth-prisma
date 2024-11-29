@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer";
 import { MailOptions } from "nodemailer/lib/smtp-transport";
+import { htmlToText } from "nodemailer-html-to-text";
 
 /**
  * Get the SMTP transporter using the runtime config.
@@ -23,6 +24,7 @@ export const getTransporter = () => {
  */
 export const sendEmail = async (data: MailOptions) => {
   const transporter = getTransporter();
+  transporter.use("compile", htmlToText());
   const config = useRuntimeConfig();
   await transporter.sendMail({ ...data, from: config.SMTP_FROM, replyTo: config.SMTP_USER });
 };

@@ -17,4 +17,6 @@ export const requireAuth: EventHandler = async (event: H3Event) => {
       statusCode: 401,
       statusMessage: "Unauthorized",
     });
+  // Attach the session to the event
+  event.context.auth = session;
 };

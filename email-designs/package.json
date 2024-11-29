@@ -1,0 +1,35 @@
+{
+  "name": "maizzle-auth-starter-templates",
+  "private": false,
+  "description": "A few email ugly email templates that can be used as a starting point for your API sent emails. Built with Maizzle",
+  "author": {
+    "name": "Behon Baker",
+    "email": "behon.baker@yahoo.com",
+    "url": "https://behonbaker.com"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "maizzle build production",
+    "dev": "maizzle serve",
+    "format": "prettier --write .",
+    "maildev": "npx --yes maildev --ip localhost",
+    "prepare": "husky",
+    "testEmails": "node server"
+  },
+  "dependencies": {
+    "@maizzle/framework": "next",
+    "dotenv": "^16.4.5",
+    "tailwindcss-preset-email": "latest"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.2.0",
+    "@types/mustache": "^4.2.5",
+    "@types/nodemailer": "^6.4.17",
+    "@types/nodemailer-html-to-text": "^3.1.3",
+    "husky": "^9.1.7",
+    "mustache": "^4.2.0",
+    "nodemailer": "^6.9.16",
+    "nodemailer-html-to-text": "^3.2.0",
+    "prettier": "^3.4.1"
+  }
+}
