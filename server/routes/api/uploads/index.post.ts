@@ -18,7 +18,7 @@ export default defineEventHandler({
     const uploaded = [];
     for (const file of files) {
       const id = createId();
-      const ext = file.filename.split(".").pop();
+      const ext = file.filename?.split(".").pop();
       const filename = `${id}.${ext}`;
       const url = `/uploads/${filename}`;
       await storage.setItemRaw(filename, file.data);

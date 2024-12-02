@@ -1,5 +1,3 @@
-import { requireAuth } from "~/utils/require-auth";
-
 export default defineEventHandler({
   // The user has to be logged in to access this route
   onRequest: [requireAuth],

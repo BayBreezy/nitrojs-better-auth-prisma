@@ -1,6 +1,5 @@
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
-import prisma from "./prisma";
 import { magicLink, openAPI, bearer, admin } from "better-auth/plugins";
 import mustache from "mustache";
 
