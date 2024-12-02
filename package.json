@@ -1,7 +1,7 @@
 {
   "name": "nitro-better-auth-prisma-example",
   "private": false,
-  "description": "An example of using Better Auth with NitroJS and Prisma",
+  "description": "An example of using Better Auth with Nitro and Prisma",
   "keywords": [
     "nitro",
     "nitrojs",
@@ -16,7 +16,7 @@
     "url": "https://behonbaker.com"
   },
   "scripts": {
-    "afterClone": "npm i && npm run prisma:push && npm run prisma:seed && npm run better:generate",
+    "afterClone": "rm -rf .nitro .output node_modules package-lock.json && npm i && npm run prisma:push && npm run prisma:seed && npm run better:generate",
     "better:generate": "npx @better-auth/cli generate --config ./server/utils/auth.ts",
     "build": "nitro build",
     "dev": "nitro dev",
@@ -30,8 +30,8 @@
   },
   "dependencies": {
     "@paralleldrive/cuid2": "^2.2.2",
-    "@prisma/client": "^6.0.0",
-    "better-auth": "^1.0.7",
+    "@prisma/client": "^6.0.1",
+    "better-auth": "^1.0.8",
     "chalk": "^5.3.0",
     "cors": "^2.8.5",
     "dayjs": "^1.11.13",
@@ -39,7 +39,7 @@
     "mustache": "^4.2.0",
     "nodemailer": "^6.9.16",
     "nodemailer-html-to-text": "^3.2.0",
-    "prisma-extension-pagination": "^0.7.4",
+    "prisma-extension-pagination": "^0.7.5",
     "rotating-file-stream": "^3.2.5",
     "serve-static": "^2.1.0",
     "zod": "^3.23.8"
@@ -55,14 +55,11 @@
     "@types/serve-static": "^1.15.7",
     "commitlint": "^19.6.0",
     "husky": "^9.1.7",
-    "nitropack": "latest",
+    "nitropack": "2.10.4",
     "prettier": "^3.4.1",
-    "prisma": "^6.0.0"
+    "prisma": "^6.0.1"
   },
   "prisma": {
     "seed": "npx --yes tsx prisma/seed.ts"
-  },
-  "overrides": {
-    "@prisma/client": "^6.0.0"
   }
 }
