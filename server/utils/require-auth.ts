@@ -1,5 +1,6 @@
 import { EventHandler, H3Event } from "h3";
 import { fromNodeHeaders } from "better-auth/node";
+import { auth } from "./auth";
 
 /**
  * Middleware used to require authentication for a route.
