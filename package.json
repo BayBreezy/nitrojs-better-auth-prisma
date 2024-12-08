@@ -31,7 +31,7 @@
   "dependencies": {
     "@paralleldrive/cuid2": "^2.2.2",
     "@prisma/client": "^6.0.1",
-    "better-auth": "^1.0.8",
+    "better-auth": "^1.0.13",
     "chalk": "^5.3.0",
     "cors": "^2.8.5",
     "dayjs": "^1.11.13",
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.6.0",
-    "@faker-js/faker": "^9.2.0",
+    "@faker-js/faker": "^9.3.0",
     "@types/cors": "^2.8.17",
     "@types/morgan": "^1.9.9",
     "@types/mustache": "^4.2.5",
@@ -56,7 +56,7 @@
     "commitlint": "^19.6.0",
     "husky": "^9.1.7",
     "nitropack": "2.10.4",
-    "prettier": "^3.4.1",
+    "prettier": "^3.4.2",
     "prisma": "^6.0.1"
   },
   "prisma": {
