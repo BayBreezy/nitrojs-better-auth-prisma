@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@maizzle/framework": "next",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.4.7",
     "tailwindcss-preset-email": "latest"
   },
   "devDependencies": {
