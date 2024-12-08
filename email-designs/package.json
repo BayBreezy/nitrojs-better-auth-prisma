@@ -22,7 +22,7 @@
     "tailwindcss-preset-email": "latest"
   },
   "devDependencies": {
-    "@faker-js/faker": "^9.2.0",
+    "@faker-js/faker": "^9.3.0",
     "@types/mustache": "^4.2.5",
     "@types/nodemailer": "^6.4.17",
     "@types/nodemailer-html-to-text": "^3.1.3",
