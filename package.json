@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@paralleldrive/cuid2": "^2.2.2",
-    "@prisma/client": "^6.1.0",
+    "@prisma/client": "^6.4.1",
     "better-auth": "^1.1.4",
     "chalk": "^5.4.1",
     "cors": "^2.8.5",
